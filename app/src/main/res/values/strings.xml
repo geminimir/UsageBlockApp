@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">UsageBlockApp</string>
+    <string name="legalities">This app censors keyboard input by replacing the current keyboard with a MomCensor keyboard.
+    This keyboard can potentially collect any text you enter. MomCensor scans detected text for prohibited words.
+    MomCensor does not store any text that you enter. MomCensor does not sort any text you enter out of your phone.\n
+    This app requires you to activate device administrator and Usage Access. This give MomCensor the authority to erase data or change the screen password or set password rules or monitor screen unlock attempts or lock the screen or disable camera or set storage encryption.
+    In reality MomCensor only uses the settings to prevent unauthorized uninstallation of MomCensor, empowering you to control and restrict inappropriate words.</string>
+
+
+    <string name="select_apps_title">Select Apps</string>
+    <string name="select_apps_content">Choose which apps you want to control.</string>
+
+</resources>

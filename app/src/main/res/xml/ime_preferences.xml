@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="General"
+        android:key="general">
+
+        <PreferenceScreen
+            android:title="@string/select_apps_title"
+            android:summary="@string/select_apps_content"
+            android:key="selectApps"/>
+
+        <mobi.upod.timedurationpicker.TimeDurationPickerPreference
+            android:title="Set Timer"
+            android:summary="Set the maximum amount of time permitted per app."
+            android:key="time"
+            android:defaultValue="900000"/>
+
+        <PreferenceScreen
+            android:title="Enable Uninstall"
+            android:summary="Make app uninstallable again."
+            android:key="uninstall" />
+        <PreferenceScreen
+            android:title="Hide App"
+            android:summary="Make it invisible"
+            android:key="hide"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
