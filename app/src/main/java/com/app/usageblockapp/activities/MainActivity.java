@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        /*if(needPermissionForBlocking(getApplicationContext())) {
+        if(needPermissionForBlocking(getApplicationContext())) {
             showSettingsDialog();
         } else {
             startService(new Intent(MainActivity.this, ForegroundProcessService.class));
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction tx = manager.beginTransaction();
         tx.replace(R.id.frameLayout, new MainFragment());
         tx.commit();
-        */
+
     }
 
     public static boolean needPermissionForBlocking(Context context) {
