@@ -48,8 +48,9 @@ public class AppsListAdapter extends RecyclerView.Adapter<AppsListAdapter.ViewHo
         holder.txtAppName.setText(app.getName());
         holder.swActivate.setChecked(app.isActivated());
         try {
-            holder.imgIcon.setImageDrawable(getAppIcon(app.getPackageName()));
-        } catch (PackageManager.NameNotFoundException e) {
+            //holder.imgIcon.setImageDrawable(getAppIcon(app.getPackageName()));
+        } catch (Exception e) {
+            holder.imgIcon.setImageDrawable(context.getResources().getDrawable(R.drawable.no_image));
             e.printStackTrace();
         }
 
@@ -91,9 +92,8 @@ public class AppsListAdapter extends RecyclerView.Adapter<AppsListAdapter.ViewHo
         }
     }
 
-    private Drawable getAppIcon(String packageName) throws PackageManager.NameNotFoundException{
+    private Drawable getAppIcon(String packageName) throws Exception{
         PackageManager pm = context.getPackageManager();
-        Drawable icon = pm.getApplicationIcon(packageName);
-        return icon;
+        return pm.getApplicationIcon(packageName);
     }
 }
